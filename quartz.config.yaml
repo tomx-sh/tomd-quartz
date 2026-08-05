@@ -9,6 +9,8 @@ configuration:
   locale: en-US
   baseUrl: localhost:8080
   ignorePatterns:
+    - not-published
+    - AGENTS.md
     - private
     - templates
     - .obsidian
