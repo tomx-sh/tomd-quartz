@@ -58,7 +58,7 @@ a.internal:hover {
     "grid-sidebar-left grid-center grid-sidebar-right"
     "grid-sidebar-left grid-footer grid-sidebar-right";
   min-height: 100vh;
-  padding: 0 !important;
+  padding: 0;
 }
 
 .page > #quartz-body .sidebar.left {
@@ -66,7 +66,7 @@ a.internal:hover {
   gap: 1rem;
   width: 280px;
   height: 100vh;
-  padding: 45px 18px 24px !important;
+  padding: 45px 18px 24px;
   background: #fcfcfc;
   border-right: 1px solid #e5e5e5;
 }
@@ -148,8 +148,10 @@ a.internal:hover {
 }
 
 .explorer .explorer-ul {
+  box-sizing: border-box;
   display: flex;
   flex-direction: column;
+  width: 100%;
   margin: 0;
   padding: 0 0 0 20px;
 }
@@ -179,6 +181,15 @@ a.internal:hover {
   text-decoration: none;
 }
 
+.explorer .nav-file-title {
+  display: block;
+  overflow: hidden;
+  max-width: 100%;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  transition: none;
+}
+
 .explorer a.active,
 .explorer a:hover {
   color: var(--secondary);
@@ -193,7 +204,7 @@ a.internal:hover {
   width: 698px;
   min-width: 0;
   margin: 0;
-  padding: 24px 0 96px 48px !important;
+  padding: 24px 48px 96px;
 }
 
 .page > #quartz-body .page-header,
